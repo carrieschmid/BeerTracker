@@ -1,13 +1,13 @@
 import React from 'react';
 import Header from './Header';
-// import OurTeam from './OurTeam';
-import { Switch, Route } from 'react-router-dom';
+import OurBeer from './OurBeer';
 
 function App() {
  return (
   <div> 
    <Header/>
-    </div>
+   <OurBeer/>
+  </div>
  );
 }
 

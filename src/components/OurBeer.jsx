@@ -1,11 +1,12 @@
 import React from 'react';
-// import OurTeamProfile from './OurTeamProfile';
+import BeerProfile from './BeerProfile';
+import Red from '../assets/images/red-box-background.jpg';
 
 
 var profiles = [
 
  {
-  costCategory: mid,   
+  costCategory: Red,   
   name: 'Widmere IPA',
   brand: 'Widmere',
   percentAC: 4,
@@ -14,16 +15,16 @@ var profiles = [
  },
  
  {
-    costCategory: low,   
-    name: 'Miller High Life',
-    brand: 'Miller',
-    percentAC: 3,
-    kegPrice: 15,
-    pintPrice: 3
-   },
+  costCategory: Red,   
+  name: 'Miller High Life',
+  brand: 'Miller',
+  percentAC: 3,
+  kegPrice: 15,
+  pintPrice: 3
+ },
 
  {
-  costCategory: low,   
+  costCategory: Red,   
   name: 'Pabst Blue Ribbon',
   brand: 'Pabst',
   percentAC: 3,
@@ -34,10 +35,12 @@ var profiles = [
 ];
 
 function OurBeer(){
- return(
-
-  <div>
+       
+    return(
+   <div className="container">
    <h5>Beers in Stock</h5>
+   <div className="row"> 
+  
    {profiles.map((profile, index)=>
     <BeerProfile 
      costCategory= {profile.costCategory}
@@ -48,6 +51,8 @@ function OurBeer(){
      pintPrice={profile.pintPrice}
      key={index} /> 
    )}
+   
+   </div>
   </div>
  );
 
