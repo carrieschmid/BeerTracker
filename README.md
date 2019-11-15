@@ -5,8 +5,14 @@
 #### By _**Carrie Schmid**_
 
 ## Description
+_Environment including Babel transpiling, Webpack module bundling, a development server with hot module replacement, and linting._
+_Uses client-side routing via the React-Router library to create appearance of multiple pages_
+_Styles added using CSS objects_
+<!-- State is effectively used and is lifted in an efficient manner that follows best practices.
+Documentation accurately represents current component/state structure of application. -->
 
-_A user can enter data on orders and categorize orders by vendor._
+## Specs(Component Tree)
+
 
 ## Setup/Installation Requirements
 
@@ -16,12 +22,6 @@ _download and open browser_
 
 _none_
 
-
-## Specs
-|Behavior| Input | Output|
-|:-|:-|:-|
-|Find info on a keg in the categories of name, brand, price and alcoholContent | Keg Menu|
-|Routing to each category| 
 
 ## Support and contact details
 

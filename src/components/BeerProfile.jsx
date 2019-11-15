@@ -11,7 +11,7 @@ function BeerProfile(props){
  }
 
  var cardStyle = {
-    height: '400px',
+    height: '450px',
     width: '250px',
     marginRight: '40px'
 }
@@ -28,10 +28,11 @@ function BeerProfile(props){
     <li className="list-group-item">% Alcohol: {props.percentAC}</li>
     <li className="list-group-item">Keg Price: {props.kegPrice}</li>
     <li className="list-group-item">Pint Price: {props.pintPrice}</li>
+    <li className="list-group-item">Pints Remaining: {props.pintsLeft}</li>
    </ul>
    <div className="card-body">
-    <a href="#" className="card-link">Card link</a>
-    <a href="#" className="card-link">Another link</a>
+    <a href="#" className="card-link">Sell a pint</a>
+    
    </div>
   </div>
 

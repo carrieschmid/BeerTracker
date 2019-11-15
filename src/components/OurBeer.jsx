@@ -49,6 +49,7 @@ function OurBeer(){
      percentAC={profile.percentAC}
      kegPrice={profile.kegPrice}
      pintPrice={profile.pintPrice}
+     pintsLeft ={profile.pintsLeft}
      key={index} /> 
    )}
    
