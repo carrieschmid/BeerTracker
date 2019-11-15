@@ -5,16 +5,16 @@ import PropTypes from 'prop-types';
 
 function BeerProfile(props){
  var imgStyle = {
-     height: '50px',
-     width: '250px'
+  height: '50px',
+  width: '250px'
      
- }
+ };
 
  var cardStyle = {
-    height: '450px',
-    width: '250px',
-    marginRight: '40px'
-}
+  height: '450px',
+  width: '250px',
+  marginRight: '40px'
+ };
  return (
 
   <div className="card" style ={cardStyle} >
@@ -31,8 +31,9 @@ function BeerProfile(props){
     <li className="list-group-item">Pints Remaining: {props.pintsLeft}</li>
    </ul>
    <div className="card-body">
-    <a href="#" className="card-link">Sell a pint</a>
-    
+    {/* question-how to decrease pints remaining with an onclick function */}
+    <button type="button" class="btn btn-secondary" onclick="myFunction(var newPintsLeft)">Sell a Pint</button>
+   
    </div>
   </div>
 
@@ -46,7 +47,8 @@ BeerProfile.propTypes = {
  brand: PropTypes.string.isRequired,
  percentAC: PropTypes.number.isRequired,
  kegPrice: PropTypes.number.isRequired,
- pintPrice: PropTypes.number.isRequired
+ pintPrice: PropTypes.number.isRequired,
+ pintsLeft: PropTypes.number.isRequired
 };
 
 export default BeerProfile;

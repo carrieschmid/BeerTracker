@@ -11,7 +11,8 @@ var profiles = [
   brand: 'Widmere',
   percentAC: 4,
   kegPrice: 20,
-  pintPrice: 4
+  pintPrice: 4,
+  pintsLeft: 124
  },
  
  {
@@ -20,7 +21,8 @@ var profiles = [
   brand: 'Miller',
   percentAC: 3,
   kegPrice: 15,
-  pintPrice: 3
+  pintPrice: 3,
+  pintsLeft: 124
  },
 
  {
@@ -29,29 +31,29 @@ var profiles = [
   brand: 'Pabst',
   percentAC: 3,
   kegPrice: 15,
-  pintPrice: 3
+  pintPrice: 3,
+  pintsLeft: 124
  },
 
 ];
 
 function OurBeer(){
        
-    return(
-   <div className="container">
-   <h5>Beers in Stock</h5>
+ return(
+  <div className="container">
    <div className="row"> 
   
-   {profiles.map((profile, index)=>
-    <BeerProfile 
-     costCategory= {profile.costCategory}
-     name = {profile.name}
-     brand={profile.brand}
-     percentAC={profile.percentAC}
-     kegPrice={profile.kegPrice}
-     pintPrice={profile.pintPrice}
-     pintsLeft ={profile.pintsLeft}
-     key={index} /> 
-   )}
+    {profiles.map((profile, index)=>
+     <BeerProfile 
+      costCategory= {profile.costCategory}
+      name = {profile.name}
+      brand={profile.brand}
+      percentAC={profile.percentAC}
+      kegPrice={profile.kegPrice}
+      pintPrice={profile.pintPrice}
+      pintsLeft ={profile.pintsLeft}
+      key={index} /> 
+    )}
    
    </div>
   </div>
