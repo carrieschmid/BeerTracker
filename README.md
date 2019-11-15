@@ -1,4 +1,4 @@
-# _Tap Room_
+# _Beer Tracker_
 
 #### _Application successfully uses client-side routing via the React-Router library to create appearance of multiple pages._
 
