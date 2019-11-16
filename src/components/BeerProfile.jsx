@@ -13,7 +13,8 @@ function BeerProfile(props){
  var cardStyle = {
   height: '450px',
   width: '250px',
-  marginRight: '40px'
+  marginRight: '40px',
+  marginTop:'15px'
  };
  return (
 

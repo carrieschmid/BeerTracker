@@ -1,12 +1,22 @@
 import React from 'react';
 import BeerProfile from './BeerProfile';
-import Red from '../assets/images/red-box-background.jpg';
+import Red from '../assets/images/red-box.jpg';
+import Yellow from '../assets/images/yellow-box.jpg';
 
 
 var profiles = [
-
- {
-  costCategory: Red,   
+{
+    costCategory: Yellow,   
+    name: 'Ninkasi IPA',
+    brand: 'Ninkasi',
+    percentAC: 4,
+    kegPrice: 20,
+    pintPrice: 4,
+    pintsLeft: 124
+}, 
+ 
+{
+  costCategory: Yellow,   
   name: 'Widmere IPA',
   brand: 'Widmere',
   percentAC: 4,
