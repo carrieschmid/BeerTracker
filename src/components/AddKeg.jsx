@@ -8,23 +8,23 @@ function AddKeg(){
      type='text'
      id='name'
      placeholder='Name'/>
-     <input
+    <input
      type='text'
      id='brand'
      placeholder='Brand'/>
-     <input
+    <input
      type='text'
      id='percentAC'
      placeholder='% Alcohol:'/>
-     <input
+    <input
      type='text'
      id='kegPrice'
      placeholder='Keg Price:'/>
-     <input
+    <input
      type='text'
      id='pintPrice'
      placeholder='Pint Price:'/>
-     <button type='submit'>Submit</button>
+    <button type='submit'>Submit</button>
 
    </form>
   </div>
