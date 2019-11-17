@@ -12,7 +12,9 @@ _Styles added using CSS objects_
 Documentation accurately represents current component/state structure of application. -->
 
 ## Specs(Component Tree)
-
+<img src="Keg-Route- Structure.jpg"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
 
 ## Setup/Installation Requirements
 
