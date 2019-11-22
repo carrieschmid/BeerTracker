@@ -10,6 +10,17 @@ import { Switch, Route } from 'react-router-dom';
 
 
 function App() {
+    contrustor(props){
+        super(props);
+        this.state={
+            masterKegList:{},
+            selectedKeg:null
+        }
+    
+        this.handleAddingNewKeg=this.handleAddingNewKeg.bind(this);
+        this.handleSellPint = this.handleSellPint.bind(this)
+    }
+    
  return (
   <div> 
 
