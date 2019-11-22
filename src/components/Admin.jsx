@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import OurBeer from './OurBeer';
-import BeerProfile from './BeerProfile';
 import BeerDetail from './BeerDetail';
 
 function Admin(props) {
