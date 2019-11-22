@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import OurBeer from './OurBeer';
-import BeerDetail from './BeerDetail';
+
+
 
 function Admin(props) {
-  let optionalSelectedKegContent = null;
-  if (props.selectedKeg != null){
-    optionalSelectedKegContent =  <BeerDetail selecteKeg={props.kegList[props.selectedKeg]}/>;
+//   let optionalSelectedKegContent = null;
+//   if (props.selectedKeg != null){
+//     optionalSelectedKegContent =  <BeerDetail selectedKeg={props.kegList[props.selectedKeg]}/>;
   
-  }
+//   }
   return (
     <div>
       <h2>Admin</h2>

@@ -1,8 +1,5 @@
-// 'beerList' is missing in props validation      react/prop-types
-// 'beerList.map' is missing in props validation
-
 import React from 'react';
-import BeerProfile from './BeerProfile';
+import Beer from './Beer';
 import PropTypes from 'prop-types';
 
 function OurBeer(props){
@@ -11,8 +8,33 @@ function OurBeer(props){
   <div className="container">
    <div className="row"> 
   
-    {props.beerList.map((profile, index)=>
-     <BeerProfile 
+    {Object.keys(props.kegList).map(function(kegId){
+      var keg = props.kegList[kegId];
+      return
+      <Beer 
+      key={kegId}
+      name = {keg.name}
+      brand={keg.brand}
+      kegId={keg.id}
+      currentRouterPath={props.currentRouterPath}
+      onKegSelection={props.onKegSelection}/>;
+    })}
+    </div>
+    </div>
+    );
+    }
+
+    OurBeer.propTypes = {
+      name: PropTypes.name.isRequired,
+      brand: PropTypes.brand.isRequired,
+      currentRouterPath: PropTypes.string,
+      onKegSelection: PropTypes.func,
+      kegId: PropTypes.string.isRequired
+    }
+    
+    
+    
+    {/* <BeerProfile 
       costCategory= {profile.costCategory}
       name = {profile.name}
       brand={profile.brand}
@@ -20,23 +42,11 @@ function OurBeer(props){
       kegPrice={profile.kegPrice}
       pintPrice={profile.pintPrice}
       pintsRemaining ={profile.pintsRemaining}
-      key={index}
-      id={profile.id}
-      index={index}
-      // updateFeed={props.updateFeed}
+      key={kegId}
+      kegId={keg.id}
       sellPint={profile.sellPint} /> 
-    )}
+ */}
 
-   
-   </div>
-  </div>
- );
 
-}
-
-OurBeer.proptypes = {
-  beerList: PropTypes.array,
-  sellPint: PropTypes.func,
-};
 
 export default OurBeer;
