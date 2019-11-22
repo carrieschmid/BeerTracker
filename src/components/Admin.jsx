@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import OurBeer from './OurBeer';
+import AddKeg from './AddKeg';
 
 
 
@@ -13,7 +14,8 @@ function Admin(props) {
   return (
     <div>
       <h2>Admin</h2>
-      {optionalSelectedKegContent}
+      {/* {optionalSelectedKegContent} */}
+      <AddKeg/>
       <OurBeer
         kegList={props.kegList}
         

@@ -10,7 +10,7 @@ import { Switch, Route } from 'react-router-dom';
 
 
 class App extends React.Component {
-    contrustor(props){
+    constructor(props){
         super(props);
         this.state={
             masterKegList:{},
@@ -29,9 +29,10 @@ class App extends React.Component {
             this.setState({masterKegList:newMasterKegList});
     }
 
+   
     handleChangingSelectedKeg(kegId){
-        this.setState({masterKegList: newMasterKegList})
-    }
+        this.setState({selectedKeg: kegId});
+      }
 
     
 render(){
@@ -51,7 +52,7 @@ render(){
 }
 
 
-}
+
 
 export default App;
 
