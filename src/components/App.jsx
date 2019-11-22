@@ -20,7 +20,15 @@ function App() {
         this.handleAddingNewKeg=this.handleAddingNewKeg.bind(this);
         this.handleSellPint = this.handleSellPint.bind(this)
     }
-    
+
+    handleAddingNewKeg(newKeg){
+        var newMasterKegList = Object.assign({}, this.state.masterKegList,
+            {[negKeg.id]: newKeg});
+            newMasterKegList[newKeg.id]
+            this.setState({masterKegList:newMasterKegList});
+        }
+    }
+
  return (
   <div> 
 
