@@ -23,8 +23,8 @@ function Beer(props){
 }
 
 Beer.propTypes = {
- name: PropTypes.name.isRequired,
- brand: PropTypes.brand.isRequired,
+ name: PropTypes.name,
+ brand: PropTypes.brand,
  currentRouterPath: PropTypes.string,
  onKegSelection: PropTypes.func,
  kegId: PropTypes.string.isRequired
