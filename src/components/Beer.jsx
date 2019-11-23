@@ -22,7 +22,7 @@ function Beer(props){
  }
 }
 
-Ticket.propTypes = {
+Beer.propTypes = {
  name: PropTypes.name.isRequired,
  brand: PropTypes.brand.isRequired,
  currentRouterPath: PropTypes.string,
