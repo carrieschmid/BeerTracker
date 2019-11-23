@@ -2,32 +2,32 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Beer(props){
-  const kegInformation =
-    <div>
-      <h3>{props.name} - {props.brand}</h3>
-      <hr/>
-    </div>;
-  if (props.currentRouterPath === '/admin'){
-    return (
-      <div onClick={() => {props.onKegSelection(props.kegId);}}>
+ const kegInformation =
+  <div>
+   <h3>{props.name} - {props.brand}</h3>
+   <hr/>
+  </div>;
+ if (props.currentRouterPath === '/admin'){
+  return (
+   <div onClick={() => {props.onKegSelection(props.kegId);}}>
     {kegInformation}
-      </div>
-    );
-  } else {
-    return (
-      <div>
-        {kegInformation}
-      </div>
-    );
-  }
+   </div>
+  );
+ } else {
+  return (
+   <div>
+    {kegInformation}
+   </div>
+  );
+ }
 }
 
 Ticket.propTypes = {
-  name: PropTypes.name.isRequired,
-  brand: PropTypes.brand.isRequired,
-  currentRouterPath: PropTypes.string,
-  onKegSelection: PropTypes.func,
-  kegId: PropTypes.string.isRequired
+ name: PropTypes.name.isRequired,
+ brand: PropTypes.brand.isRequired,
+ currentRouterPath: PropTypes.string,
+ onKegSelection: PropTypes.func,
+ kegId: PropTypes.string.isRequired
 };
 
 export default Beer;

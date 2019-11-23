@@ -9,9 +9,8 @@ function OurBeer(props){
    <div className="row"> 
   
     {Object.keys(props.kegList).map(function(kegId){
-      var keg = props.kegList[kegId];
-      return
-      <Beer 
+     var keg = props.kegList[kegId];
+     return <Beer 
       key={kegId}
       name = {keg.name}
       brand={keg.brand}
@@ -19,22 +18,23 @@ function OurBeer(props){
       currentRouterPath={props.currentRouterPath}
       onKegSelection={props.onKegSelection}/>;
     })}
-    </div>
-    </div>
-    );
-    }
+   </div>
+  </div>
+ );
+}
 
-    OurBeer.propTypes = {
-      name: PropTypes.name.isRequired,
-      brand: PropTypes.brand.isRequired,
-      currentRouterPath: PropTypes.string,
-      onKegSelection: PropTypes.func,
-      kegId: PropTypes.string.isRequired
-    }
+OurBeer.propTypes = {
+ name: PropTypes.string.isRequired,
+ brand: PropTypes.string.isRequired,
+ kegList: PropTypes.object,
+ currentRouterPath: PropTypes.string,
+ onKegSelection: PropTypes.func,
+ kegId: PropTypes.string.isRequired
+};
     
     
     
-    {/* <BeerProfile 
+{/* <BeerProfile 
       costCategory= {profile.costCategory}
       name = {profile.name}
       brand={profile.brand}

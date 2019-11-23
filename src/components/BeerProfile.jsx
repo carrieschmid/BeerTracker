@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 
 function BeerProfile(props){
 
-function handleSellPintClick(){
-    props.sellPint(props.index);
-}
+ function handleSellPintClick(){
+  props.sellPint(props.index);
+ }
 
  let imgStyle = {
   height: '50px',
@@ -46,8 +46,8 @@ function handleSellPintClick(){
 }
 
 BeerProfile.propTypes = {
-    selectedKeg: PropTypes.object
-    //  costCategory:PropTypes.element,
+ selectedKeg: PropTypes.object
+ //  costCategory:PropTypes.element,
 //  name: PropTypes.string.isRequired,
 //  brand: PropTypes.string.isRequired,
 //  percentAC: PropTypes.number.isRequired,

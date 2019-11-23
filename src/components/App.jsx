@@ -10,45 +10,45 @@ import { Switch, Route } from 'react-router-dom';
 
 
 class App extends React.Component {
-    constructor(props){
-        super(props);
-        this.state={
-            masterKegList:{},
-            selectedKeg:null
-        };
+ constructor(props){
+  super(props);
+  this.state={
+   masterKegList:{},
+   selectedKeg:null
+  };
     
-        this.handleAddingNewKeg=this.handleAddingNewKeg.bind(this);
-        this.handleSellPint = this.handleSellPint.bind(this)
-    }
+  this.handleAddingNewKeg=this.handleAddingNewKeg.bind(this);
+  this.handleSellPint = this.handleSellPint.bind(this);
+ }
     
 
-    handleAddingNewKeg(newKeg){
-        var newMasterKegList = Object.assign({}, this.state.masterKegList,
-            {[negKeg.id]: newKeg});
-            newMasterKegList[newKeg.id]
-            this.setState({masterKegList:newMasterKegList});
-    }
+ handleAddingNewKeg(newKeg){
+  var newMasterKegList = Object.assign({}, this.state.masterKegList,
+   {[newKeg.id]: newKeg});
+  newMasterKegList[newKeg.id];
+  this.setState({masterKegList:newMasterKegList});
+ }
 
    
-    handleChangingSelectedKeg(kegId){
-        this.setState({selectedKeg: kegId});
-      }
+ handleChangingSelectedKeg(kegId){
+  this.setState({selectedKeg: kegId});
+ }
 
     
-render(){
- return (
-  <div> 
-  <Header/>
-   <Switch>
-          <Route exact path='/' render={()=><OurBeer kegList={this.state.masterKegList} />} />
-          <Route path='/admin' render={(props) => <Admin kegList={this.state.masterKegList} currentRouterPath={props.location.pathname}onKegSelection={this.handleChangingSelectedKeg}
-            selectedKeg={this.state.selectedKeg} />} />
-          <Route path='/addkeg' render={()=><KegControl onAddNewKeg={this.handleAddingNewKeg} />}/>
-          {/* <Route component={Error404} /> */}
+ render(){
+  return (
+   <div> 
+    <Header/>
+    <Switch>
+     <Route exact path='/' render={()=><OurBeer kegList={this.state.masterKegList} />} />
+     <Route path='/admin' render={(props) => <Admin kegList={this.state.masterKegList} currentRouterPath={props.location.pathname}onKegSelection={this.handleChangingSelectedKeg}
+      selectedKeg={this.state.selectedKeg} />} />
+     <Route path='/addkeg' render={()=><KegControl onAddNewKeg={this.handleAddingNewKeg} />}/>
+     {/* <Route component={Error404} /> */}
     </Switch>
-    </div>
- );
-}
+   </div>
+  );
+ }
 }
 
 
