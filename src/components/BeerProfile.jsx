@@ -21,9 +21,16 @@ function BeerProfile(props){
   marginRight: '40px',
   marginTop:'15px'
  };
- return (
 
-  <div className="card" style ={cardStyle} >
+ 
+
+
+
+
+
+
+const beerInformation =
+<div className="card" style ={cardStyle} >
    <img src={props.selectedKeg.costCategory} className="card-img-top" style ={imgStyle} alt="red"/>
    <div className="card-body">
     <h5 className="card-title">{props.selectedKegname}</h5>
@@ -39,23 +46,38 @@ function BeerProfile(props){
     <button type="button" class="btn btn-secondary" onclick={handleSellPintClick}>Sell a Pint</button>
    
    </div>
-  </div>
+  </div>;
 
-
- );
+  if (props.currentRouterPath === '/admin'){
+    return (
+      <div onClick={() => {props.onKegSelection(props.ticketId);}}>
+        {ticketInformation}
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        {ticketInformation}
+      </div>
+    );
+  }
 }
 
+
 BeerProfile.propTypes = {
- selectedKeg: PropTypes.object
- //  costCategory:PropTypes.element,
-//  name: PropTypes.string.isRequired,
-//  brand: PropTypes.string.isRequired,
-//  percentAC: PropTypes.number.isRequired,
-//  kegPrice: PropTypes.number.isRequired,
-//  pintPrice: PropTypes.number.isRequired,
-//  pintsRemaining: PropTypes.number.isRequired,
-//  sellPint: PropTypes.func,
-//  index: PropTypes.number,
+//  selectedKeg: PropTypes.object,
+costCategory:PropTypes.element,
+ name: PropTypes.string.isRequired,
+ brand: PropTypes.string.isRequired,
+ percentAC: PropTypes.number.isRequired,
+ kegPrice: PropTypes.number.isRequired,
+ pintPrice: PropTypes.number.isRequired,
+ pintsRemaining: PropTypes.number.isRequired,
+ sellPint: PropTypes.func,
+ index: PropTypes.number,
+ currentRouterPath: PropTypes.string,
+  onKegSelection: PropTypes.func,
+  kegId: PropTypes.string.isRequired
 
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import Beer from './Beer';
+import BeerProfile from './BeerProfile';
 import PropTypes from 'prop-types';
 
 function OurBeer(props){
@@ -10,7 +10,7 @@ function OurBeer(props){
   
     {Object.keys(props.kegList).map(function(kegId){
      var keg = props.kegList[kegId];
-     return <Beer 
+     return <BeerProfile 
       key={kegId}
       name = {keg.name}
       brand={keg.brand}
