@@ -1,8 +1,8 @@
 //'onKegSubmit' is missing in props validation 
 
 import React from 'react';
-import PropTypes from 'prop-types';
-import { v4 } from 'uuid';
+// import PropTypes from 'prop-types';
+// import { v4 } from 'uuid';
 
 function AddKeg(props){
  let _name = null;
@@ -15,10 +15,16 @@ function AddKeg(props){
  function handleNewKegSubmit(event){
   event.preventDefault();
   props.onAddNewKeg({
-   name: _name.value, brand: _brand.value, percentAC: _percentAC, kegPrice: _kegPrice, pintsRemaining: _pintsRemaining, pintPrice: _pintPrice, id: v4()});
+   name: _name.value, brand: _brand.value, percentAC: _percentAC.value, kegPrice: _kegPrice.value, pintsRemaining: _pintsRemaining.value, pintPrice: _pintPrice.value, 
+//    id: v4()
+    });
     
   _name.value='';
   _brand.value='';
+  _percentAC= 0;
+  _kegPrice=0;
+  _pintRemaining=124;
+  _pintPrice=0;
 
  }
 
@@ -29,32 +35,32 @@ function AddKeg(props){
      type='text'
      id='name'
      placeholder='Name'
-     ref={(input)=>{name =input}}/>
+     ref={(input)=>{_name =input;}}/>
     <input
      type='text'
      id='brand'
      placeholder='Brand'
-     ref={(input)=>{brand =input}}/>
+     ref={(input)=>{_brand =input;}}/>
     <input
      type='text'
      id='percentAC'
      placeholder='% Alcohol:'
-     ref={(input)=>{_percentAC =input}}/>
+     ref={(input)=>{_percentAC =input;}}/>
     <input
      type='text'
      id='kegPrice'
      placeholder='Keg Price:'
-     ref={(input)=>{kegPrice =input}}/>
+     ref={(input)=>{_kegPrice =input;}}/>
     <input
      type='text'
      id='pintPrice'
      placeholder='Pint Price:'
-     ref={(input)=>{pintPrice =input}}/>
+     ref={(input)=>{_pintPrice =input;}}/>
     <input
      type='text'
      id='pintsRemaining'
      placeholder='Pints Remaining:'
-     ref={(input)=>{pintsRemaining =input}}/>
+     ref={(input)=>{_pintsRemaining =input;}}/>
     <button type='submit'>Submit</button>
 
    </form>
@@ -64,6 +70,7 @@ function AddKeg(props){
 
 AddKeg.propTypes={
     onAddNewKeg: Proptypes.func
+  
 };
 
 export default AddKeg;

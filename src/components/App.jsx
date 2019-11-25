@@ -1,12 +1,10 @@
 import React from 'react';
 import Header from './Header';
 import OurBeer from './OurBeer';
-import Login from './Login';
-import AddKeg from './AddKeg';
+import Admin from './Admin';
+import NewKegControl from './NewKegControl';
 import { Switch, Route } from 'react-router-dom';
-// import React, { Component } from 'react';  
-
-
+import { v4 } from 'uuid';
 
 
 class App extends React.Component {
@@ -23,8 +21,9 @@ class App extends React.Component {
     
 
  handleAddingNewKeg(newKeg){
+    var newKegId = v4()
   var newMasterKegList = Object.assign({}, this.state.masterKegList,
-   {[newKeg.id]: newKeg});
+   {[newKegId]: newKeg});
   newMasterKegList[newKeg.id];
   this.setState({masterKegList:newMasterKegList});
  }
@@ -41,9 +40,11 @@ class App extends React.Component {
     <Header/>
     <Switch>
      <Route exact path='/' render={()=><OurBeer kegList={this.state.masterKegList} />} />
+     <Route path='/newKeg' render={()=><NewKegControl onAddNewKeg={this.this.handleAddingNewKeg} />} />
      <Route path='/admin' render={(props) => <Admin kegList={this.state.masterKegList} currentRouterPath={props.location.pathname}onKegSelection={this.handleChangingSelectedKeg}
-      selectedKeg={this.state.selectedKeg} />} />
-     <Route path='/addkeg' render={()=><KegControl onAddNewKeg={this.handleAddingNewKeg} />}/>
+      selectedKeg={this.state.selectedKeg} 
+      />} />
+     
      <Route component={Error404} />
     </Switch>
    </div>
