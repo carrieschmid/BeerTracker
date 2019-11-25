@@ -14,6 +14,7 @@ function OurBeer(props){
       key={kegId}
       name = {keg.name}
       brand={keg.brand}
+      key={kegId}
       kegId={keg.id}
       currentRouterPath={props.currentRouterPath}
       onKegSelection={props.onKegSelection}/>;
@@ -24,12 +25,10 @@ function OurBeer(props){
 }
 
 OurBeer.propTypes = {
- name: PropTypes.string.isRequired,
- brand: PropTypes.string.isRequired,
- kegList: PropTypes.object,
- currentRouterPath: PropTypes.string,
- onKegSelection: PropTypes.func,
- kegId: PropTypes.string.isRequired
+  keglist: PropTypes.object,
+  currentRouterPath: PropTypes.string,
+  onKegSelection: PropTypes.func
+ 
 };
     
     
