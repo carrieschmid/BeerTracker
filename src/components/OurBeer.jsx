@@ -5,17 +5,20 @@ import PropTypes from 'prop-types';
 function OurBeer(props){
        
  return(
-  <div className="container">
-   <div className="row"> 
+  <div >
+   <div > 
   
     {Object.keys(props.kegList).map(function(kegId){
      var keg = props.kegList[kegId];
      return <BeerProfile 
-      key={kegId}
+    
       name = {keg.name}
       brand={keg.brand}
+      percentAC={keg.percentAC}
+      kegPrice = {keg.kegPrice}
+      pintPrice ={keg.pintPrice}
       key={kegId}
-      kegId={keg.id}
+      kegId={kegId}
       currentRouterPath={props.currentRouterPath}
       onKegSelection={props.onKegSelection}/>;
     })}
@@ -25,9 +28,9 @@ function OurBeer(props){
 }
 
 OurBeer.propTypes = {
-  keglist: PropTypes.object,
-  currentRouterPath: PropTypes.string,
-  onKegSelection: PropTypes.func
+ kegList: PropTypes.object,
+ currentRouterPath: PropTypes.string,
+ onKegSelection: PropTypes.func
  
 };
     

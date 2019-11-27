@@ -1,30 +1,30 @@
 //'onKegSubmit' is missing in props validation 
 
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 // import { v4 } from 'uuid';
 
 function AddKeg(props){
  let _name = null;
  let _brand = null;
- let _percentAC = 0;
- let _kegPrice = 0;
- let _pintPrice = 0;
- let _pintsRemaining = 124;
+ let _percentAC = null;
+ let _kegPrice = null;
+ let _pintPrice = null;
+ let _pintsRemaining = null;
 
  function handleNewKegSubmit(event){
   event.preventDefault();
   props.onAddNewKeg({
    name: _name.value, brand: _brand.value, percentAC: _percentAC.value, kegPrice: _kegPrice.value, pintsRemaining: _pintsRemaining.value, pintPrice: _pintPrice.value, 
-//    id: v4()
-    });
+   //    id: v4()
+  });
     
   _name.value='';
   _brand.value='';
-  _percentAC= 0;
-  _kegPrice=0;
-  _pintRemaining=124;
-  _pintPrice=0;
+  _percentAC= '';
+  _kegPrice='';
+  _pintsRemaining='';
+  _pintPrice='';
 
  }
 
@@ -69,7 +69,7 @@ function AddKeg(props){
 }
 
 AddKeg.propTypes={
-    onAddNewKeg: Proptypes.func
+ onAddNewKeg: PropTypes.func
   
 };
 

@@ -4,35 +4,36 @@ import AddKeg from './AddKeg';
 import PropTypes from 'prop-types';
 
 class NewKegControl extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      formVisibleOnPage: false
-    };
-    this.handleTroubleshootingConfirmation = this.handleTroubleshootingConfirmation.bind(this);
-  }
+ constructor(props) {
+  super(props);
+  this.state = {
+   formVisibleOnPage: false
+  };
+  this.handleConfirmation = this.handleConfirmation.bind(this);
+ }
 
-  handleTroubleshootingConfirmation(){
-    this.setState({formVisibleOnPage: true});
-  }
+ handleConfirmation(){
+  this.setState({formVisibleOnPage: true});
+ }
 
-  render(){
-    let currentlyVisibleContent = null;
-    if (this.state.formVisibleOnPage){
-      currentlyVisibleContent = <AddKeg onAddNewKeg={this.props.onAddNewKeg}/>;
-    } else {
-      currentlyVisibleContent = <ConfirmationQuestions onTroubleshootingConfirmation={this.handleTroubleshootingConfirmation}/>;
-    }
-    return (
-      <div>
-        {currentlyVisibleContent}
-      </div>
-    );
+ render(){
+  let currentlyVisibleContent = null;
+  if (this.state.formVisibleOnPage){
+   currentlyVisibleContent = <AddKeg onAddNewKeg={this.props.onAddNewKeg}/>;
+  } else {
+   currentlyVisibleContent = <ConfirmationQuestions onConfirmation={this.handleConfirmation}/>;
+   //here's where we pass the prop onConfirmation into ConfirmationQuestions
   }
+  return (
+   <div>
+    {currentlyVisibleContent}
+   </div>
+  );
+ }
 }
 
 NewKegControl.propTypes = {
-  onAddNewKeg: PropTypes.func
+ onAddNewKeg: PropTypes.func
 };
 
-export default NewTicketControl;
+export default NewKegControl;

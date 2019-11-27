@@ -12,27 +12,31 @@ function Header() {
         
  };
 
- var buttonStyle = {
+ //  var buttonStyle = {
    
-  marginRight: '20px',
+ //   marginRight: '20px',
    
           
- };
+ //  };
 
  return (
   <div  >
 
     
    <nav className= "navbar navbar-expand-lg navbar-light bg-dark">
-    <a class="nav-link active" href="#" style={navStyle}>Keg Tracker</a>
+    <a className="nav-link active" href="#" style={navStyle}>Keg Tracker</a>
      
-    <Link to="/login"><button className="btn btn-outline-success my-2 my-sm-0" style={buttonStyle}>Login</button></Link>
+    {/* <Link to="/login"><button className="btn btn-outline-success my-2 my-sm-0" style={buttonStyle}>Login</button></Link> */}
 
-    <Link to="addKeg"><button className="btn btn-outline-success my-2 my-sm-0">Add Keg</button></Link>
-   </nav>     
+    
+     
+    <Link to="/">Home</Link> | <Link to="newKeg">Add Keg</Link>| <Link to="/admin">Admin</Link>
+   </nav>
   </div>
 
  );
 }
+
+
 
 export default Header;

@@ -6,11 +6,11 @@ import PropTypes from 'prop-types';
 
 
 function Admin(props) {
-  let optionalSelectedKegContent = null;
-  if (props.selectedKeg != null){
-    optionalSelectedKegContent =  <BeerDetail selectedKeg={props.kegList[props.selectedKeg]}/>;
+ let optionalSelectedKegContent = null;
+ if (props.selectedKeg != null){
+  optionalSelectedKegContent =  <BeerDetail selectedKeg={props.kegList[props.selectedKeg]}/>;
   
-  }
+ }
  return (
   <div>
    <h2>Admin</h2>
@@ -26,7 +26,7 @@ function Admin(props) {
 }
 
 Admin.propTypes = {
- kegList: PropTypes.array,
+ kegList: PropTypes.object,
  currentRouterPath: PropTypes.string.isRequired,
  onKegSelection: PropTypes.func.isRequired,
  selectedKeg: PropTypes.string
