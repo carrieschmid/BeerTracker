@@ -9,50 +9,47 @@ function BeerProfile(props){
 //   props.sellPint(props.index);
 //  }
 
- let imgStyle = {
-  height: '50px',
-  width: '250px'
+//  let imgStyle = {
+//   height: '50px',
+//   width: '250px'
      
- };
+//  };
 
- let cardStyle = {
-  height: '450px',
-  width: '250px',
-  marginRight: '40px',
-  marginTop:'15px'
- };
+//  let cardStyle = {
+//   height: '450px',
+//   width: '250px',
+//   marginRight: '40px',
+//   marginTop:'15px'
+//  };
 
  
-
-
-
-
-
-
  const beerInformation =
  <div>
-  <div className="card" style ={cardStyle} >
-   {/* <img src={props.selectedKeg.costCategory} className="card-img-top" style ={imgStyle} alt="red"/>
+  <div>
+    
+    {/* <img src={props.selectedKeg.costCategory} className="card-img-top" style ={imgStyle} alt="red"/>
    <div className="card-body"> */}
-    <h5 className="card-title">{props.selectedKegname}</h5>
+    
+    
+    <h5> {props.name}</h5>
    </div>
-   <ul className="list-group list-group-flush">
-    {/* <li className="list-group-item">Brand: {props.selectedKeg.brand}</li> */}
-    <li className="list-group-item">% Alcohol: {props.selectedKeg.percentAC}</li>
-    <li className="list-group-item">Keg Price: {props.selectedKeg.kegPrice}</li>
-    <li className="list-group-item">Pint Price: {props.selectedKeg.pintPrice}</li>
-    <li className="list-group-item">Pints Remaining: {props.selectedKeg.pintsRemaining}</li>
+   <ul>
+    <li className="list-group-item">Brand: {props.brand}</li>
+    <li className="list-group-item">% Alcohol: {props.percentAC}</li>
+    <li className="list-group-item">Keg Price: {props.kegPrice}</li>
+    <li className="list-group-item">Pint Price: {props.pintPrice}</li>
+    <li className="list-group-item">Pints Remaining: {props.pintsRemaining}</li>
    </ul>
-   <div className="card-body">
+   <div>
     {/* <button type="button" class="btn btn-secondary" onclick={handleSellPintClick}>Sell a Pint</button> */}
    
+   </div>;
    </div>
-</div>;
 
 
  if (props.currentRouterPath === '/admin'){
   return (
-   <div onClick={() => {props.onKegSelection(props.ticketId);}}>
+   <div onClick={() => {props.onKegSelection(props.kegId);}}>
     {beerInformation}
    </div>
   );
@@ -68,7 +65,7 @@ function BeerProfile(props){
 
 BeerProfile.propTypes = {
  selectedKeg: PropTypes.object,
-//  costCategory:PropTypes.element,
+ //  costCategory:PropTypes.element,
  name: PropTypes.string,
  brand: PropTypes.string,
  percentAC: PropTypes.string,

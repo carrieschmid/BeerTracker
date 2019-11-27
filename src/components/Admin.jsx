@@ -17,7 +17,6 @@ function Admin(props) {
    {optionalSelectedKegContent}
    <OurBeer
     kegList={props.kegList}
-        
     currentRouterPath={props.currentRouterPath} 
     onKegSelection={props.onKegSelection}
    />

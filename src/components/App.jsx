@@ -19,6 +19,7 @@ class App extends React.Component {
     
   this.handleAddingNewKeg=this.handleAddingNewKeg.bind(this);
   //   this.handleSellPint = this.handleSellPint.bind(this);
+  this.handleChangingSelectedKeg = this.handleChangingSelectedKeg.bind(this);
  }
     
 
@@ -43,7 +44,6 @@ class App extends React.Component {
     <Switch>
      <Route exact path='/' render={()=><OurBeer kegList={this.state.masterKegList} />} />
      <Route path='/newKeg' render={()=><NewKegControl onAddNewKeg={this.handleAddingNewKeg} />} />
-     {/* why this.state vs. just this? */}
      <Route path='/admin' render={(props) => <Admin kegList={this.state.masterKegList} currentRouterPath={props.location.pathname}onKegSelection={this.handleChangingSelectedKeg}
       selectedKeg={this.state.selectedKeg} 
      />} />
