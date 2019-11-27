@@ -24,8 +24,8 @@ function BeerProfile(props){
 
  
  const beerInformation =
- <div>
   <div>
+   <div>
     
     {/* <img src={props.selectedKeg.costCategory} className="card-img-top" style ={imgStyle} alt="red"/>
    <div className="card-body"> */}
@@ -44,7 +44,7 @@ function BeerProfile(props){
     {/* <button type="button" class="btn btn-secondary" onclick={handleSellPintClick}>Sell a Pint</button> */}
    
    </div>;
-   </div>
+  </div>;
 
 
  if (props.currentRouterPath === '/admin'){
