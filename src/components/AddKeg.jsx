@@ -23,7 +23,7 @@ function AddKeg(props){
   _brand.value='';
   _percentAC= '';
   _kegPrice='';
-  _pintsRemaining='';
+  _pintsRemaining='124';
   _pintPrice='';
 
  }
@@ -52,6 +52,7 @@ function AddKeg(props){
      placeholder='Keg Price:'
      ref={(input)=>{_kegPrice =input;}}/>
     <input
+    
      type='text'
      id='pintPrice'
      placeholder='Pint Price:'
@@ -59,7 +60,7 @@ function AddKeg(props){
     <input
      type='text'
      id='pintsRemaining'
-     placeholder='Pints Remaining:'
+     placeholder='124'
      ref={(input)=>{_pintsRemaining =input;}}/>
     <button type='submit'>Submit</button>
 

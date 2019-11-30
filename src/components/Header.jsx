@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Link } from 'react-router-dom';
 
 
@@ -29,7 +30,7 @@ function Header() {
     {/* <Link to="/login"><button className="btn btn-outline-success my-2 my-sm-0" style={buttonStyle}>Login</button></Link> */}
 
     
-     
+ 
     <Link to="/">Home</Link> | <Link to="newKeg">Add Keg</Link>| <Link to="/admin">Admin</Link>
    </nav>
   </div>

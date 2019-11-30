@@ -41,6 +41,7 @@ class App extends React.Component {
   return (
    <div> 
     <Header/>
+   
     <Switch>
      <Route exact path='/' render={()=><OurBeer kegList={this.state.masterKegList} />} />
      <Route path='/newKeg' render={()=><NewKegControl onAddNewKeg={this.handleAddingNewKeg} />} />
