@@ -24,16 +24,23 @@ class App extends React.Component {
     
 
  handleAddingNewKeg(newKeg){
+     //let's just wait to assign IDs until handleAddingNewTicketToList() in App.jsx fires. This ensures they won't be included in the newTicket argument, and therefore won't appear inside the ticket object in masterTicketList.
   var newKegId = v4();
   var newMasterKegList = Object.assign({}, this.state.masterKegList,
    {[newKegId]: newKeg});
-  newMasterKegList[newKeg.id];
+   //is this necessary?
+//   newMasterKegList[newKeg.id];
   this.setState({masterKegList:newMasterKegList});
+  //not sure if these are coming back how they are supposed to
+  console.log(this.state.newMasterKegList);
+  console.log(this.state);
  }
 
    
  handleChangingSelectedKeg(kegId){
   this.setState({selectedKeg: kegId});
+  //this comes back as null?
+  console.log(this.state);
  }
 
     
@@ -46,7 +53,7 @@ class App extends React.Component {
      <Route exact path='/' render={()=><OurBeer kegList={this.state.masterKegList} />} />
      <Route path='/newKeg' render={()=><NewKegControl onAddNewKeg={this.handleAddingNewKeg} />} />
      <Route path='/admin' render={(props) => <Admin kegList={this.state.masterKegList} currentRouterPath={props.location.pathname}onKegSelection={this.handleChangingSelectedKeg}
-      selectedKeg={this.state.selectedKeg} 
+      selectedKeg={this.state.selectedKeg} s
      />} />
      
      <Route component={Error404} />

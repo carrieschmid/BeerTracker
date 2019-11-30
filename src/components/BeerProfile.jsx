@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+// import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 
@@ -7,8 +8,10 @@ function BeerProfile(props){
     
     
 // Object(...) is not a function at new BeerProfile (BeerProfile.jsx:7)
- const [pintsCounter, setPintsCounter] = useState(0);
- //  function handleSellPintClick(){
+//  const [pintsCounter, setPintsCounter] = useState(0);
+
+
+//  function handleSellPintClick(){
  //   props.sellPint(props.index);
  //  }
 
@@ -42,9 +45,9 @@ function BeerProfile(props){
     <li className="list-group-item">Keg Price: {props.kegPrice}</li>
     <li className="list-group-item">Pint Price: {props.pintPrice}</li>
     <li className="list-group-item">Pints Remaining: {124}</li>
-    <div>
+    {/* <div>
      <button onClick={() => setPintsCounter(pintsCounter - 1)}>Sell Pint</button>
-    </div>
+    </div> */}
    </ul>
    <div>
     {/* <button type="button" class="btn btn-secondary" onclick={handleSellPintClick}>Sell a Pint</button> */}

@@ -10,6 +10,8 @@ function OurBeer(props){
   
     {Object.keys(props.kegList).map(function(kegId){
      var keg = props.kegList[kegId];
+     //Now, because the ID is no longer included inside the ticket object we'll need to refactor how we pass pass the ID from TicketList to Ticket:
+     //what are []? and what's realtionship between kegId and newKegId?
      return <BeerProfile 
     
       name = {keg.name}
@@ -19,6 +21,7 @@ function OurBeer(props){
       pintPrice ={keg.pintPrice}
       key={kegId}
       kegId={kegId}
+      //Here, key and ticketId props are assigned to the ticketIds being looped through by Object.keys() instead of a id value within the ticket object in masterTicketList.
       currentRouterPath={props.currentRouterPath}
       onKegSelection={props.onKegSelection}/>;
     })}
