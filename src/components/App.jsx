@@ -14,7 +14,8 @@ class App extends React.Component {
   super(props);
   this.state={
    masterKegList:{},
-   selectedKeg:null
+   selectedKeg:null,
+   pintsRemaining:124
   };
     
   this.handleAddingNewKeg=this.handleAddingNewKeg.bind(this);
@@ -22,6 +23,7 @@ class App extends React.Component {
   this.handleChangingSelectedKeg = this.handleChangingSelectedKeg.bind(this);
  }
     
+  
 
  handleAddingNewKeg(newKeg){
      //let's just wait to assign IDs until handleAddingNewTicketToList() in App.jsx fires. This ensures they won't be included in the newTicket argument, and therefore won't appear inside the ticket object in masterTicketList.
@@ -36,6 +38,12 @@ class App extends React.Component {
   console.log(this.state);
  }
 
+//  handleSellPint(kegId){
+//     var updatedKeg = Object.assign({}, this.state.masterKegList,
+//         {[newKegId]: newKeg});
+//     var newPintsRemaing = pintsRemaining - 1;
+//     this.setState({masterKegList:newMasterKegList});
+// }
    
  handleChangingSelectedKeg(kegId){
   this.setState({selectedKeg: kegId});
@@ -45,13 +53,16 @@ class App extends React.Component {
 
     
  render(){
+    console.log(this.state.masterKegList);
   return (
    <div> 
     <Header/>
    
     <Switch>
-     <Route exact path='/' render={()=><OurBeer kegList={this.state.masterKegList} />} />
+     <Route exact path='/' render={()=><OurBeer kegList={this.state.masterKegList} 
+     onSellPint={this.handleSellPint} />
      <Route path='/newKeg' render={()=><NewKegControl onAddNewKeg={this.handleAddingNewKeg} />} />
+     //why props passed in here?
      <Route path='/admin' render={(props) => <Admin kegList={this.state.masterKegList} currentRouterPath={props.location.pathname}onKegSelection={this.handleChangingSelectedKeg}
       selectedKeg={this.state.selectedKeg} s
      />} />

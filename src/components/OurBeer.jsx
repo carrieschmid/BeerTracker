@@ -23,7 +23,8 @@ function OurBeer(props){
       kegId={kegId}
       //Here, key and ticketId props are assigned to the ticketIds being looped through by Object.keys() instead of a id value within the ticket object in masterTicketList.
       currentRouterPath={props.currentRouterPath}
-      onKegSelection={props.onKegSelection}/>;
+      onKegSelection={props.onKegSelection}
+      onSellPint= {props.onSellPint} />;
     })}
    </div>
   </div>
@@ -33,7 +34,8 @@ function OurBeer(props){
 OurBeer.propTypes = {
  kegList: PropTypes.object,
  currentRouterPath: PropTypes.string,
- onKegSelection: PropTypes.func
+ onKegSelection: PropTypes.func,
+ onSellPint: PropTypes.func
  
 };
     
