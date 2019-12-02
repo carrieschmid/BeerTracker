@@ -19,6 +19,7 @@ function Admin(props) {
     kegList={props.kegList}
     currentRouterPath={props.currentRouterPath} 
     onKegSelection={props.onKegSelection}
+    onSellPint={props.onSellPint}
    />
   </div>
  );
@@ -28,7 +29,10 @@ Admin.propTypes = {
  kegList: PropTypes.object,
  currentRouterPath: PropTypes.string.isRequired,
  onKegSelection: PropTypes.func.isRequired,
- selectedKeg: PropTypes.string
+ selectedKeg: PropTypes.string,
+ onSellPint: PropTypes.func,
+ pintsRemaining: PropTypes.number
+
 };
 
 export default Admin;

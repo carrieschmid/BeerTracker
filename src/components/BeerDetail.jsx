@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 function BeerDetail(props){
 
-function handleSellPintClick(){
-props.onSellPint(props.index);
+//  function handleSellPintClick(){
+//   props.onSellPint(props.index);
     
-  }
+//  }
 
 
  return (
@@ -19,7 +19,7 @@ props.onSellPint(props.index);
     <li>Pint Price: {props.selectedKeg.pintPrice}</li>
     <li>Pints Remaining: {props.selectedKeg.pintsRemaining}</li>
    </ul>
-    <button type="button" class="btn btn-secondary" onclick={handleSellPintClick}>Sell a Pint</button>
+   {/* <button type="button" class="btn btn-secondary" onclick={handleSellPintClick}>Sell a Pint</button> */}
       
    <hr/>
   </div>

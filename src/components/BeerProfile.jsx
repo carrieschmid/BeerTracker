@@ -5,12 +5,10 @@ import PropTypes from 'prop-types';
 
 
 function BeerProfile(props){
-    
-    
 
-
-
-
+ function handleSellPintClick() {
+  props.onSellPint(props.kegId);
+ }
  //  let imgStyle = {
  //   height: '50px',
  //   width: '250px'
@@ -40,13 +38,9 @@ function BeerProfile(props){
     <li className="list-group-item">% Alcohol: {props.percentAC}</li>
     <li className="list-group-item">Keg Price: {props.kegPrice}</li>
     <li className="list-group-item">Pint Price: {props.pintPrice}</li>
-    <li className="list-group-item">Pints Remaining: {124}</li>
-    
+    <li className="list-group-item">Pints Remaining: {props.pintsRemaining}</li>
+    <button onClick={handleSellPintClick}>Sell Pint</button>
    </ul>
-   <div>
-   
-   
-   </div>;
   </div>;
 
 

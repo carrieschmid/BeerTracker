@@ -19,12 +19,13 @@ function OurBeer(props){
       percentAC={keg.percentAC}
       kegPrice = {keg.kegPrice}
       pintPrice ={keg.pintPrice}
+      pintsRemaining={keg.pintsRemaining}
       key={kegId}
       kegId={kegId}
-      //Here, key and ticketId props are assigned to the ticketIds being looped through by Object.keys() instead of a id value within the ticket object in masterTicketList.
       currentRouterPath={props.currentRouterPath}
       onKegSelection={props.onKegSelection}
-      onSellPint= {props.onSellPint} />;
+      onSellPint= {props.onSellPint} 
+     />;
     })}
    </div>
   </div>
@@ -39,21 +40,4 @@ OurBeer.propTypes = {
  
 };
     
-    
-    
-{/* <BeerProfile 
-      costCategory= {profile.costCategory}
-      name = {profile.name}
-      brand={profile.brand}
-      percentAC={profile.percentAC}
-      kegPrice={profile.kegPrice}
-      pintPrice={profile.pintPrice}
-      pintsRemaining ={profile.pintsRemaining}
-      key={kegId}
-      kegId={keg.id}
-      sellPint={profile.sellPint} /> 
- */}
-
-
-
 export default OurBeer;
