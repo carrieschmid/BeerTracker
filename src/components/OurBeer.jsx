@@ -3,6 +3,7 @@ import BeerProfile from './BeerProfile';
 import PropTypes from 'prop-types';
 
 function OurBeer(props){
+    console.log(props.masterKegList)
        
  return(
   <div >
@@ -10,8 +11,6 @@ function OurBeer(props){
   
     {Object.keys(props.kegList).map(function(kegId){
      var keg = props.kegList[kegId];
-     //Now, because the ID is no longer included inside the ticket object we'll need to refactor how we pass pass the ID from TicketList to Ticket:
-     //what are []? and what's realtionship between kegId and newKegId?
      return <BeerProfile 
     
       name = {keg.name}
@@ -32,12 +31,6 @@ function OurBeer(props){
  );
 }
 
-OurBeer.propTypes = {
- kegList: PropTypes.object,
- currentRouterPath: PropTypes.string,
- onKegSelection: PropTypes.func,
- onSellPint: PropTypes.func
- 
-};
+
     
 export default OurBeer;

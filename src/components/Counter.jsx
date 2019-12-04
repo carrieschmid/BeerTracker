@@ -2,14 +2,14 @@
 
 
 // function Counter() {
-//  let [counter, setCounter] = useState(0);
-//  counter = 124; 
-//  return (
-//   <div>
-//    <h1>{counter}</h1>
-//    <button onClick={() => setCounter(counter - 1)}>Count!</button>
-//   </div>
-//  );
+//     const [props.pintsReamaining, setCounter] = useState(0);
+
+//     return (
+//         <div>
+//             <h1>{counter}</h1>
+//             <button onClick={() => setCounter(pintsRemaining - 1)}>Sell Pint</button>
+//         </div>
+//     )
 // }
 
 // export default Counter;

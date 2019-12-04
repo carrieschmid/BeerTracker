@@ -21,7 +21,7 @@ function AddKeg(props){
   _brand.value='';
   _percentAC= '';
   _kegPrice='';
-  _pintsRemaining='124';
+  _pintsRemaining='';
   _pintPrice='';
 
  }

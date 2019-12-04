@@ -6,6 +6,8 @@ import PropTypes from 'prop-types';
 
 function BeerProfile(props){
 
+    console.log(props.selectedKeg)
+
  function handleSellPintClick() {
   props.onSellPint(props.kegId);
  }
@@ -60,21 +62,6 @@ function BeerProfile(props){
 }
 
 
-BeerProfile.propTypes = {
- selectedKeg: PropTypes.object,
- //  costCategory:PropTypes.element,
- name: PropTypes.string,
- brand: PropTypes.string,
- percentAC: PropTypes.string,
- kegPrice: PropTypes.string,
- pintPrice: PropTypes.string,
- pintsRemaining: PropTypes.string,
- sellPint: PropTypes.func,
- index: PropTypes.number,
- currentRouterPath: PropTypes.string,
- onKegSelection: PropTypes.func,
- kegId: PropTypes.string.isRequired
 
-};
 
 export default BeerProfile;
