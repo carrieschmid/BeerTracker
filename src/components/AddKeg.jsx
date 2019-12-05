@@ -27,7 +27,8 @@ function AddKeg(props){
  }
 
  return (
-  <div>
+  
+  <div className="container">
    <form onSubmit={handleNewKegSubmit}>
     <input
      type='text'

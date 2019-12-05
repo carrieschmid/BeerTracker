@@ -3,7 +3,7 @@ import React from 'react';
 function BeerDetail(props){
 
  return (
-  <div>
+  <div className="container">
    <hr/>
    <h1>{props.selectedKeg.name} - {props.selectedKeg.brand}</h1>
    <ul>

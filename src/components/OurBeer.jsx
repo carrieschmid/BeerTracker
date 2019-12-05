@@ -2,10 +2,12 @@ import React from 'react';
 import BeerProfile from './BeerProfile';
 
 function OurBeer(props){
- 
-       
+
+
+
  return(
-  <div >
+<div className= "container"> 
+<div >
    <div > 
   
     {Object.keys(props.kegList).map(function(kegId){
@@ -27,6 +29,7 @@ function OurBeer(props){
     })}
    </div>
   </div>
+</div>
  );
 }
 

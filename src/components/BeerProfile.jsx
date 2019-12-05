@@ -9,19 +9,6 @@ function BeerProfile(props){
  function handleSellPintClick() {
   props.onSellPint(props.kegId);
  }
- //  let imgStyle = {
- //   height: '50px',
- //   width: '250px'
-     
- //  };
-
- //  let cardStyle = {
- //   height: '450px',
- //   width: '250px',
- //   marginRight: '40px',
- //   marginTop:'15px'
- //  };
-
  
  const beerInformation =
   <div>
