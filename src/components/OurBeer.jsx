@@ -1,9 +1,8 @@
 import React from 'react';
 import BeerProfile from './BeerProfile';
-import PropTypes from 'prop-types';
 
 function OurBeer(props){
-    console.log(props.masterKegList)
+ 
        
  return(
   <div >

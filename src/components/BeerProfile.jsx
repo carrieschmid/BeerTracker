@@ -1,12 +1,10 @@
 import React from 'react';
 // import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-
 
 
 function BeerProfile(props){
 
-    console.log(props.selectedKeg)
+ 
 
  function handleSellPintClick() {
   props.onSellPint(props.kegId);

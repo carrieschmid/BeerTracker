@@ -31,7 +31,7 @@ function Header() {
 
     
  
-    <Link to="/">Home</Link> | <Link to="newKeg">Add Keg</Link>| <Link to="/admin">Admin</Link>
+    <Link to="/">Patron</Link> | <Link to="newKeg">Add Keg</Link>| <Link to="/admin">Admin</Link>
    </nav>
   </div>
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import ConfirmationQuestions from './ConfirmationQuestions';
 import AddKeg from './AddKeg';
-import PropTypes from 'prop-types';
+
 
 class NewKegControl extends React.Component {
  constructor(props) {
@@ -33,8 +33,6 @@ class NewKegControl extends React.Component {
  }
 }
 
-NewKegControl.propTypes = {
- onAddNewKeg: PropTypes.func
-};
+
 
 export default NewKegControl;

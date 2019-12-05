@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 function ConfirmationQuestions(props){
  return (
@@ -11,10 +10,6 @@ function ConfirmationQuestions(props){
  );
 }
 
-ConfirmationQuestions.propTypes = {
- onConfirmation: PropTypes.func
- //this is passed through from NewKegControl 
 
-};
 
 export default ConfirmationQuestions;

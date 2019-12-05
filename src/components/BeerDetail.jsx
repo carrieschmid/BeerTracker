@@ -1,14 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 function BeerDetail(props){
-
-console.log(props.onSellPint)
-
-function handleSellPintClick() {
-    props.onSellPint(props.kegId);
-   }
-
 
  return (
   <div>
@@ -20,15 +12,12 @@ function handleSellPintClick() {
     <li>Pint Price: {props.selectedKeg.pintPrice}</li>
     <li>Pints Remaining: {props.selectedKeg.pintsRemaining}</li>
    </ul>
-   <button type="button" class="btn btn-secondary" onclick={handleSellPintClick}>Sell a Pint</button>
       
    <hr/>
   </div>
  );
 }
 
-BeerDetail.propTypes = {
- selectedKeg: PropTypes.object
-};
+
   
 export default BeerDetail;

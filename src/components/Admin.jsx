@@ -1,7 +1,7 @@
 import React from 'react';
 import OurBeer from './OurBeer';
 import BeerDetail from './BeerDetail';
-import PropTypes from 'prop-types';
+
 
 
 
@@ -10,7 +10,7 @@ function Admin(props) {
  let optionalSelectedKegContent = null;
  if (props.selectedKeg != null){
   optionalSelectedKegContent =  <BeerDetail selectedKeg={props.kegList[props.selectedKeg]}
-  onSellPint={props.onSellPint}/>;
+   onSellPint={props.onSellPint}/>;
     
  }
 
