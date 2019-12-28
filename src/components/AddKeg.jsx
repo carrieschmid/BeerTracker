@@ -8,29 +8,37 @@ function AddKeg(props){
  let _percentAC = null;
  let _kegPrice = null;
  let _pintPrice = null;
- let _pintsRemaining = null;
+//  let _pintsRemaining = null;
 
  function handleNewKegSubmit(event){
   event.preventDefault();
   props.onAddNewKeg({
-   name: _name.value, brand: _brand.value, percentAC: _percentAC.value, kegPrice: _kegPrice.value, pintsRemaining: 124, pintPrice: _pintPrice.value, 
+   name: _name.value, brand: _brand.value, percentAC: _percentAC.value, kegPrice: _kegPrice.value, pintPrice: _pintPrice.value, 
+   pintsRemaining: 124
   
   });
     
   _name.value='';
   _brand.value='';
-  _percentAC= '';
-  _kegPrice='';
-  _pintsRemaining='';
-  _pintPrice='';
-
+  _percentAC.value= '';
+  _kegPrice.value='';
+  _pintPrice.value='';
+//   _pintsRemaining.value='';
+  
  }
+
+ var formStyle = {
+    marginTop: '50px',
+    marginLeft: '25px'
+   };
 
  return (
   
-  <div className="container">
+  <div style={formStyle}>
+    <p>______________________________</p>
+    <h3>Enter a new keg:</h3>
    <form onSubmit={handleNewKegSubmit}>
-    <input
+        <input
      type='text'
      id='name'
      placeholder='Name'
@@ -61,8 +69,9 @@ function AddKeg(props){
      id='pintsRemaining'
      placeholder='124'
      ref={(input)=>{_pintsRemaining =input;}}/> */}
-    <button type='submit'>Submit</button>
-
+    <p>______________________________</p>
+    <button type='submit'>  Submit</button>
+   
    </form>
   </div>
  );

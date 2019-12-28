@@ -9,7 +9,8 @@ function Header() {
   padding:'20px',
   marginRight: '600px',
   color:'white',
-  fontSize: 24
+  fontSize: 24,
+//   paddingBottom: '400px'
         
  };
 
@@ -33,6 +34,9 @@ function Header() {
     <Link to="newKeg"><button className="btn btn-outline-success my-2 my-sm-0" style={buttonStyle}>Add Keg</button></Link>    <Link to="/admin"><button className="btn btn-outline-success my-2 my-sm-0" style={buttonStyle}>Admin</button></Link>
    </nav>
   </div>
+
+
+
 
  );
 }
